@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.targetslist.TargetsListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/targets_forecast_options_tab">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/targets_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp" />
+
+        <TextView
+            android:id="@+id/targets_list_no_targets_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have no targets yet"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/targets_list_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/targets_list_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:tint="@android:color/white"
+            android:src="@drawable/ic_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/targets_forecast_options_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pure_white"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <ImageView
+            android:id="@+id/wallet_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account_balance_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wallet_balance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="100000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/wallet_icon"
+            app:layout_constraintStart_toEndOf="@+id/wallet_icon"
+            app:layout_constraintTop_toTopOf="@+id/wallet_icon" />
+
+        <View
+            android:id="@+id/wallet_balance_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/wallet_balance_value"
+            app:layout_constraintStart_toEndOf="@+id/wallet_balance_value"
+            app:layout_constraintTop_toTopOf="@+id/wallet_balance_value" />
+
+        <TextView
+            android:id="@+id/wallet_additional_balance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAllCaps="true"
+            android:text="1000000"
+            android:textColor="@color/positive"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/wallet_icon"
+            app:layout_constraintStart_toEndOf="@+id/wallet_balance_divider"
+            app:layout_constraintTop_toTopOf="@+id/wallet_icon" />
+
+        <Button
+            android:id="@+id/set_end_date_and_calculate_btn"
+            android:text="11.24.2011"
+            android:textColor="@color/pure_white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/colorAccent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

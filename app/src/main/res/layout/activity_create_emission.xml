@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.moneyemissions.CreateEmissionActivity">
+
+    <EditText
+        android:id="@+id/emission_title_et"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="160dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <Spinner
+        android:id="@+id/emission_direction_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/emission_title_et"
+        android:layout_alignBottom="@+id/emission_title_et"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-150dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/emission_title_et"
+        android:entries="@array/emission_directions" />
+
+    <TextView
+        android:id="@+id/emission_start_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emission_title_et"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="12dp"
+        android:textSize="18sp"
+        android:text="@string/emission_start_date_hint"
+        />
+
+    <TextView
+        android:id="@+id/emission_start_date_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/emission_start_date_label"
+        android:layout_alignBottom="@+id/emission_start_date_label"
+        android:layout_toEndOf="@+id/emission_start_date_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="00.00.0000"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/create_emission_select_date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/emission_start_date_value"
+        android:layout_alignStart="@+id/emission_direction_spinner"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/select_start_date_button_label"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/pure_white"/>
+
+    <Spinner
+        android:id="@+id/emission_repeat_rule_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/emission_start_date_label"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/emission_repeat_rules" />
+
+    <EditText
+        android:id="@+id/emission_value_et"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emission_repeat_rule_spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:hint="Value"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/create_emission_done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/done_button_text"
+        android:textColor="@color/pure_white"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/walletFragment"
+        android:title="@string/wallet_menu_item"
+        android:icon="@drawable/ic_wallet_24"/>
+
+    <item android:id="@+id/targetsListFragment"
+        android:title="@string/targets_menu_item"
+        android:icon="@drawable/ic_target_24"/>
+
+    <item android:id="@+id/statisticsFragment"
+        android:title="@string/stats_menu_item"
+        android:icon="@drawable/ic_chart_24"/>
+
+</menu>

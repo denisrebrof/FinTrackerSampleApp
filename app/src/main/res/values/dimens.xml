@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fin_target_list_view_elevation">8dp</dimen>
+    <dimen name="fin_target_list_view_selected_elevation">8dp</dimen>
+</resources>

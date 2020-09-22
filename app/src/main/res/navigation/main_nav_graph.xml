@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/targetsListFragment">
+
+    <fragment
+        android:id="@+id/targetsListFragment"
+        android:name="com.dr.fintracker.ui.targetslist.TargetsListFragment"
+        android:label="fragment_targets_list"
+        tools:layout="@layout/fragment_targets_list" >
+        <action
+            android:id="@+id/action_targetsListFragment_to_walletFragment2"
+            app:destination="@id/walletFragment" />
+        <action
+            android:id="@+id/action_targetsListFragment_to_statisticsFragment2"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.dr.fintracker.ui.wallet.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_walletFragment2_to_statisticsFragment2"
+            app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_walletFragment2_to_targetsListFragment"
+            app:destination="@id/targetsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.dr.fintracker.ui.statistics.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" >
+        <action
+            android:id="@+id/action_statisticsFragment2_to_walletFragment2"
+            app:destination="@id/walletFragment" />
+        <action
+            android:id="@+id/action_statisticsFragment2_to_targetsListFragment"
+            app:destination="@id/targetsListFragment" />
+    </fragment><action android:id="@+id/action_global_targetsListFragment" app:destination="@id/targetsListFragment"/><action android:id="@+id/action_global_walletFragment" app:destination="@id/walletFragment"/><action android:id="@+id/action_global_statisticsFragment" app:destination="@id/statisticsFragment"/>
+</navigation>
