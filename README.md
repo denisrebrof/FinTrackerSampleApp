@@ -12,6 +12,4 @@ Currently I am refactoring and writing tests
 Screenshots:
 | Wallets | Goals | Chart |
 :-------------------------:|:-------------------------:|:-------------------------:|
-![](readme_assets/screenshot-1.png)
-![](readme_assets/screenshot-2.png)
-![](readme_assets/screenshot-3.png)
+![](readme_assets/screenshot-1.png) | ![](readme_assets/screenshot-2.png) | ![](readme_assets/screenshot-3.png)
