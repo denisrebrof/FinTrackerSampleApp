@@ -10,4 +10,6 @@ Contains RU localization
 Currently I am refactoring and writing tests
 
 Screenshots:
-
+![Screenshot](readme_assets/screenshot-1.png)
+![Screenshot](readme_assets/screenshot-2.png)
+![Screenshot](readme_assets/screenshot-2.png)
